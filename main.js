@@ -81,7 +81,7 @@ const Kata5Heading = document.createElement('h1')
 Kata5Heading.append('Kata 5')
 main.append(Kata5Heading)
 
-const firstActiveUsers = users.filter(users => users.age >38)
+const firstActiveUsers = users.filter(users => users.age > 38)
     .find(users => users.isActive === true)
 console.log(firstActiveUsers)
 main.append(JSON.stringify(firstActiveUsers))
@@ -96,8 +96,7 @@ const Kata6Heading = document.createElement('h1')
 Kata6Heading.append('Kata 6')
 main.append(Kata6Heading)
 
-const balances = users.filter(user => user.balance)
-users.map(user => user.company='ZENCO')
+const balances = users.filter(user => user.company === 'ZENCO').map(user => user.balance)
 console.log(balances)
 main.append(JSON.stringify(balances))
 
@@ -114,8 +113,7 @@ main.append(Kata7Heading)
 
 
 
-const showAgeofUserswithFugiat = users.filter(users => users.tags).includes(['figiat'])
-users.map(users=>users.age)
+const showAgeofUserswithFugiat = users.filter(users => users.tags.includes('fugiat')).map(users => users.age)
 console.log(showAgeofUserswithFugiat)
 main.append(JSON.stringify(showAgeofUserswithFugiat))
 
